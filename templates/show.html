@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weight Tracker - Detail Berat Badan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-4">Detail Berat Badan</h1>
+
+        <table class="table-auto w-full">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Tanggal</th>
+                    <th class="px-4 py-2">Max</th>
+                    <th class="px-4 py-2">Min</th>
+                    <th class="px-4 py-2">Perbedaan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border px-4 py-2">{{ weight['tanggal'] }}</td>
+                    <td class="border px-4 py-2">{{ weight['max'] }}</td>
+                    <td class="border px-4 py-2">{{ weight['min'] }}</td>
+                    <td class="border px-4 py-2">{{ weight['max'] - weight['min'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('index') }}" class="mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Kembali ke Index</a>
+    </div>
+</body>
+</html>
